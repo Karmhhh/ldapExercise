@@ -1,0 +1,27 @@
+dn: dc=example,dc=com
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: Example Corp
+dc: example
+
+dn: ou=People,dc=example,dc=com
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Groups,dc=example,dc=com
+objectClass: organizationalUnit
+ou: Groups
+
+dn: cn=John Smith,ou=People,dc=example,dc=com
+objectClass: inetOrgPerson
+sn: Smith
+cn: John Smith
+mail: john.smith@example.com
+uid: jsmith
+userPassword: password123
+
+dn: cn=Admins,ou=Groups,dc=example,dc=com
+objectClass: groupOfNames
+cn: Admins
+member: cn=John Smith,ou=People,dc=example,dc=com
